@@ -17,7 +17,7 @@ class SocialLoginButton extends StatelessWidget {
       onPressed: () {},
       style: OutlinedButton.styleFrom(
         padding: const EdgeInsets.symmetric(vertical: 15),
-        side: const BorderSide(color: Colors.grey),
+        side: const BorderSide(color: AppStyles.primaryColor),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),

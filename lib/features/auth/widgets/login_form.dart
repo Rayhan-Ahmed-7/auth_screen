@@ -13,7 +13,7 @@ class LoginForm extends StatelessWidget {
       children: [
         const SizedBox(height: 8),
         const CustomTextField(
-          hintText: '+880 15678*****',
+          hintText: 'User Name',
           prefixIcon: Icons.phone,
         ),
         const SizedBox(height: 20),
@@ -30,9 +30,11 @@ class LoginForm extends StatelessWidget {
             Row(
               children: [
                 Checkbox(
+                  shape: CircleBorder(),
                   value: true,
                   onChanged: (value) {},
                   activeColor: Theme.of(context).primaryColor,
+                  checkColor: AppStyles.textColor,
                 ),
                 const Text('Remember Me', style: AppStyles.smallText),
               ],

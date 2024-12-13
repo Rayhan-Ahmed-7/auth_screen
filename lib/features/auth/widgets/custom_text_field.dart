@@ -34,7 +34,21 @@ class _CustomTextFieldState extends State<CustomTextField> {
           labelText: widget.hintText,
           labelStyle: TextStyle(color: Colors.grey[600]),
           floatingLabelBehavior: FloatingLabelBehavior.auto,
-          prefixIcon: Icon(widget.prefixIcon, color: Colors.grey),
+          prefixIcon: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(widget.prefixIcon, color: Colors.grey),
+                const SizedBox(width: 8),
+                Container(
+                  width: 1,
+                  height: 20,
+                  color: Colors.grey,
+                ),
+              ],
+            ),
+          ),
           suffixIcon: widget.isPassword
               ? IconButton(
                   icon: Icon(

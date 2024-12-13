@@ -13,20 +13,26 @@ class _AuthScreenState extends State<AuthScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            children: [
-              const SizedBox(height: 30),
-              Image.asset(
-                'assets/images/logo.png',
-                height: 50,
-              ),
-              const SizedBox(height: 40),
-              Expanded(
-                child: const AuthTabs(),
-              ),
-            ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              children: [
+                const SizedBox(height: 30),
+                Image.asset(
+                  'assets/images/logo.png',
+                  height: 50,
+                ),
+                const SizedBox(height: 40),
+                // Wrap AuthTabs in a Container with fixed height
+                Container(
+                  height: MediaQuery.of(context)
+                      .size
+                      .height, // Set height as needed
+                  child: const AuthTabs(),
+                ),
+              ],
+            ),
           ),
         ),
       ),
