@@ -69,12 +69,12 @@ class LoginForm extends StatelessWidget {
         const SizedBox(height: 20),
         const SocialLoginButton(
           text: 'Continue with Facebook',
-          icon: 'assets/icons/facebook.png',
+          icon: 'assets/images/fb-logo.png',
         ),
         const SizedBox(height: 10),
         const SocialLoginButton(
           text: 'Continue with Instagram',
-          icon: 'assets/icons/instagram.png',
+          icon: 'assets/images/insta-logo.png',
         ),
       ],
     );

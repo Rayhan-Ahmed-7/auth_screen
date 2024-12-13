@@ -17,7 +17,7 @@ class _AuthScreenState extends State<AuthScreen> {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              const SizedBox(height: 40),
+              const SizedBox(height: 30),
               Image.asset(
                 'assets/images/logo.png',
                 height: 50,
