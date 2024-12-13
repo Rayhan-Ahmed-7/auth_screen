@@ -6,6 +6,7 @@ class CustomTextField extends StatefulWidget {
   final IconData prefixIcon;
   final IconData? suffixIcon;
   final bool isPassword;
+  final ValueChanged<String>? onChanged; // Callback for text change
 
   const CustomTextField({
     super.key,
@@ -13,6 +14,7 @@ class CustomTextField extends StatefulWidget {
     required this.prefixIcon,
     this.suffixIcon,
     this.isPassword = false,
+    this.onChanged,
   });
 
   @override
@@ -30,6 +32,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       ),
       child: TextField(
         obscureText: widget.isPassword && !_isPasswordVisible,
+        onChanged: widget.onChanged, // Pass changes to the parent callback
         decoration: InputDecoration(
           labelText: widget.hintText,
           labelStyle: TextStyle(color: Colors.grey[600]),
